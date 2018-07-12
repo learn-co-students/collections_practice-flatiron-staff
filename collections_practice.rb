@@ -49,9 +49,8 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.map! do |word|
-    "#{word}s"
-
+  array.except(array[1]).each do |element|
+    "#{element}s"
   end
 
 
