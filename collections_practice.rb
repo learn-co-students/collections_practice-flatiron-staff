@@ -49,9 +49,16 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.except(array[1]).each do |element|
-    "#{element}s"
+  #iterate through an array except for the second element at index 1
+  array.collect! do |item|
+    if array[1] == item
+      "#{item}"
+    else
+      "#{item}s"
+    end
   end
-
-
+  #two separate array ranges?
+  #add the s and add to a new array
+  #return the new array
+  array
 end
